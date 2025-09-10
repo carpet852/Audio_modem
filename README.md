@@ -4,7 +4,7 @@
 I wanted to build a simple off-the-grid communication system that can be assembled with common off-the-self parts.  
 I programmed a Python GUI to interface with the [minimodem](http://www.whence.com/minimodem/) Linux tool, running on a RaspberryPi.  
 Minimodem use FSK modulation to transmit messages over the  audio band.  
-The messages can be transmitted by walkie-talkie over a few kilometers (I used a Baofeng UV-5R walkie talkie for my tests).  
+The messages can be transmitted by walkie-talkie over a few kilometers (I used a Baofeng UV-5R for my tests).  
 This is an old project programmed in Python 2.7, I have since moved on to [Meshtastic](https://meshtastic.org/).  
 
 ## Python code
