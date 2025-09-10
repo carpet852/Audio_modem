@@ -32,7 +32,7 @@ call_sign = 'Mickey123'      # callsign when transmitting, use only alphanumeric
 ########################################################################
 
 # author: SCA
-# email: chconsultinghk@gmail.com
+# email: chconsultinghk[at]gmail.com
 # python 2.7
 # changelog
 # v1: initial version
