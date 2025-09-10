@@ -119,6 +119,7 @@ RTC module ds3231 setup (need raspbian with systemd)
 ```
 
 ## Field test checklist
+Field test photo [here](https://github.com/carpet852/Audio_modem/blob/main/field%20test/001.JPG) 
 - UV-5R: activate VOX 2
 - UV-5R: set VOLUME around 1/3 of full volume
 - power on the RPI using the battery pack
