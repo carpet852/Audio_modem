@@ -1,10 +1,10 @@
-# Audio modem interface for Walkie Talkie
+# Audio modem interface for Walkie-Talkie
 
 ## Objective
 I wanted to build a simple off-the-grid communication system that can be assembled with common off-the-self parts.  
 I programmed a Python GUI to interface with the [minimodem](http://www.whence.com/minimodem/) Linux tool, running on a RaspberryPi.  
 Minimodem use FSK modulation to transmit messages over the  audio band.  
-The messages can be transmitted by walkie-talkie over a few Kms (I used a Baofeng UV-5R walkie talkie for my tests).  
+The messages can be transmitted by walkie-talkie over a few kilometers (I used a Baofeng UV-5R walkie talkie for my tests).  
 This is an old project programmed in Python 2.7, I have since moved on to [Meshtastic](https://meshtastic.org/).  
 
 ## Python code
@@ -25,21 +25,21 @@ $ sudo pip install PySimpleGUI27
 - RaspberryPi. A low power model is preferable. see [here](https://www.pidramble.com/wiki/benchmarks/power-consumption).
 - [RTC module](https://www.aliexpress.com/item/1005003707505154.html) connected to Raspberry Pi I2C bus (x4 2.54mm cables).
 - USB power bank & USB cable to power the RaspberryPi in the field.
-- [Baofeng UV-5R](https://fr.wikipedia.org/wiki/Baofeng_UV-5R) low-cost 5W FM walkie-talkie.
+- [Baofeng UV-5R](https://en.wikipedia.org/wiki/Baofeng_UV-5R) low-cost 5W FM walkie-talkie.
 - [Nagoya NA-771](https://baofengtech.com/product/nagoya-na-771/) 144/430 MHz Whip antenna that have better gain than the Baofeng stock antenna.
 Be careful to select the version with SMA female connector. There are also fake models on AliExpress that have a less than ideal S11.
-- USB Sound Card to be connected to cable. I tested the [UGREEN USB audio sound card](https://www.aliexpress.com/item/4001299124074.html) and the IC is properly recognized by Raspbian.
-- specially-built [cable](https://github.com/carpet852/Audio_modem/blob/main/hardware/IMG_2892.jpg) to connect the RaspberryPi to a walkie-talkie.
+- USB Sound Card to be connected to cable. I tested the [UGREEN USB audio sound card](https://www.aliexpress.com/item/4001299124074.html) and the [IC is recognized by Raspbian](https://github.com/carpet852/Audio_modem/blob/main/hardware/UGREEN_usb_audio.png).
+- Custom-built [cable](https://github.com/carpet852/Audio_modem/blob/main/hardware/IMG_2892.jpg) to connect the RaspberryPi to a walkie-talkie.
 I cut and soldered the Baofeng Mic cable to a TRRS audio jack connector.
 I designed and 3D-printed a simple cylinder to enclose the TRRS jack and filled it with holt-melt glue.
 
 ## Audio config
-Baofeng UV-5R: need to activate the [VOX](https://baofengtech.com/wp-content/uploads/2020/09/BaoFeng_UV-5R_Manual.pdf)  
+Baofeng UV-5R: need to activate the VOX (cf manual).
 I found VOX level 2 to be good enough.  
 UGREEN USB Sound Card levels: output PCM 40, input MIC 85.  
 Adjust output/input levels to prevent signal clipping and trigger VOX on walkie-talkie.  
 Attention: audio levels need to be adjusted in the audio mixer each time the sound card is plugged!  
-The Python GUI has a button to perform the audio level calibration automatically.  
+The Python GUI has a button to calibrate the audio levels automatically.  
   
 Some commands
 ```
@@ -60,7 +60,7 @@ $ arecord -l
 ```
 
 ## WiFi AP and VNC server
-The RaspberryPi needs to be configured as a [WiFi Access Point](https://thepi.io/how-to-use-your-raspberry-pi-as-a-wireless-access-point/), and the VNC server needs to be activated in Raspbian.
+The RaspberryPi needs to be configured as a [WiFi Access Point](https://thepi.io/how-to-use-your-raspberry-pi-as-a-wireless-access-point/), and the [VNC server](https://www.ionos.com/digitalguide/server/configuration/setting-up-virtual-network-computing-on-raspberry-pi/) needs to be activated in Raspbian.
 The Raspberry Pi can be accessed from your phone using any VNC client app.  
 
 ## Webserver
@@ -125,5 +125,4 @@ RTC module ds3231 setup (need raspbian with systemd)
 - connect USB audio adaptor to RPI first, then to UV-5R
 - connect to RPI WiFi AP, then to RPI VNC server
 - launch minimodem_gui.py > Config > Set Volume (needs to be done each time the USB audio adaptor is disconnected)
-
 
