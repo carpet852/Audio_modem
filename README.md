@@ -23,9 +23,9 @@ $ sudo pip install PySimpleGUI27
 
 ## Hardware
 - RaspberryPi. A low power model is preferable. see [here](https://www.pidramble.com/wiki/benchmarks/power-consumption).
-- RTC module connecte to Raspberry Pi I2C bus (x4 2.54mm cables).
+- [RTC module](https://www.aliexpress.com/item/1005003707505154.html) connected to Raspberry Pi I2C bus (x4 2.54mm cables).
 - USB power bank & USB cable to power the RaspberryPi in the field.
-- Low-cost [Baofeng UV-5R](https://fr.wikipedia.org/wiki/Baofeng_UV-5R) 5W FM walkie-talkie.
+- [Baofeng UV-5R](https://fr.wikipedia.org/wiki/Baofeng_UV-5R) low-cost 5W FM walkie-talkie.
 - [Nagoya NA-771](https://baofengtech.com/product/nagoya-na-771/) 144/430 MHz Whip antenna that have better gain than the Baofeng stock antenna.
 Be careful to select the version with SMA female connector. There are also fake models on AliExpress that have a less than ideal S11.
 - USB Sound Card to be connected to cable. I tested the [UGREEN USB audio sound card](https://www.aliexpress.com/item/4001299124074.html) and the IC is properly recognized by Raspbian.
@@ -87,7 +87,7 @@ error log:
 
 ## RTC module
 A RTC module can be added to keep track of time since the RapsberryPi is not supposed to be connected to the internet.  
-I bought a [DS3231 RTC module with battery](https://www.aliexpress.com/item/1005003707505154.html) and I connected it to the I2C bus on the raspberry Pi.  
+I bought a [DS3231]() RTC module with battery and I connected it to the I2C bus on the raspberry Pi.  
 [Adafruit RTC tutorial](https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time)  
   
 Some commands
