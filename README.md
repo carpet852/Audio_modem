@@ -87,7 +87,7 @@ error log:
 
 ## RTC module
 A RTC module can be added to keep track of time since the RapsberryPi is not supposed to be connected to the internet.  
-I bought a [DS3231]() RTC module with battery and I connected it to the I2C bus on the raspberry Pi.  
+I bought a [DS3231](https://www.analog.com/en/products/ds3231.html) RTC module with battery and I connected it to the I2C bus on the raspberry Pi.  
 [Adafruit RTC tutorial](https://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time)  
   
 Some commands
