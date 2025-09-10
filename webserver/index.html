@@ -1,0 +1,17 @@
+<html>
+ <head>
+  <title>Text Files</title>
+ </head>
+ <body>
+    <h1>Text Files</h1>
+    <li><a href="receive/">Files received</a></li>
+    <li><a href="send/">Files to send</a></li><br>
+    <form action="cgi-bin/form.py" method="post">
+      <b>Filename?<b><br>
+      <input name="filename" type="text">.txt<br>
+      <b>Message?<b><br>
+      <textarea name="message" rows="10" cols="50">type text here</textarea><br>
+      <input type="submit" value="write text file"><br>
+    </form>
+ </body>
+</html>
