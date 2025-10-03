@@ -25,7 +25,7 @@ $ sudo pip install PySimpleGUI27
 - RaspberryPi. A low power model is preferable. see [here](https://www.pidramble.com/wiki/benchmarks/power-consumption).
 - [RTC module](https://www.aliexpress.com/item/1005003707505154.html) connected to Raspberry Pi I2C bus (x4 2.54mm cables).
 - USB power bank & USB cable to power the RaspberryPi in the field.
-- [Baofeng UV-5R](https://en.wikipedia.org/wiki/Baofeng_UV-5R) low-cost 5W FM walkie-talkie.  
+- [Baofeng UV-5R](https://en.wikipedia.org/wiki/Baofeng_UV-5R) low-cost 5W FM UHF VHF walkie-talkie.  
   Please do note that in many countries, it is illegal to use a transmitter >0.5W without a proper radio amateur license.
 - [Nagoya NA-771](https://baofengtech.com/product/nagoya-na-771/) 144/430 MHz Whip antenna that have better gain than the Baofeng stock antenna.
 Be careful to select the version with SMA female connector. There are also fake models on AliExpress that have a less than ideal S11.
